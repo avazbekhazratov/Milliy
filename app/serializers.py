@@ -22,31 +22,14 @@ from app.models import (
 )
 
 
-# class ProductsSerializer(serializers.ModelSerializer):
-#     image_url = serializers.SerializerMethodField()
-#
-#     class Meta:
-#         model = Product
-#         fields = '__all__'
-#
-#     def get_image_url(self, obj):
-#         request = self.context.get('request')
-#         if obj.img:
-#             return obj.img.url
-#         return None
-
-
-# class ProductImg(serializers.ModelSerializer):
-#     class Meta:
-#         model = Product_images
-#         fields = "__all__"
-#
-#     def get_image_url(self, obj):
-#         request = self.context.get('request')
-#         if obj.img:
-#             return obj.img.url
-#         return None
-
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+class SubCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SubCategory
+        fields = '__all__'
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
