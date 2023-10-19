@@ -26,10 +26,13 @@ class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
+
+
 class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SubCategory
         fields = '__all__'
+
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -47,3 +50,15 @@ class MyModelSerializer(serializers.ModelSerializer):
 
     def get_image_urls(self, obj):
         return [img.img.url for img in obj.img.all()]
+
+
+class MainSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Main
+        fields = "__all__"
+
+
+class PartnersSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Partners
+        fields = "__all__"

@@ -21,7 +21,6 @@ class CategoryView(GenericAPIView):
         ser = self.get_serializer(ctgs, many=True).data
         return Response({'Success': ser})
 
-
     def post(self, request):
         data = request.data
         if "name" not in data or not data['name']:
@@ -31,7 +30,6 @@ class CategoryView(GenericAPIView):
         if ser.is_valid(raise_exception=True):
             ser.save()
             return Response({"Success": ser.data})
-
 
     def put(self, request, pk):
         data = request.data
@@ -52,9 +50,9 @@ class CategoryView(GenericAPIView):
         return Response({"Success": "Category Deleted"})
 
 
-
 class SubCategoryView(GenericAPIView):
     serializer_class = SubCategorySerializer
+
     def get(self, request, pk=None):
         if pk:
             ctg = SubCategory.objects.filter(id=pk).first()
@@ -65,7 +63,6 @@ class SubCategoryView(GenericAPIView):
         ctgs = SubCategory.objects.all()
         ser = self.get_serializer(ctgs, many=True).data
         return Response({'Success': ser})
-
 
     def post(self, request):
         data = request.data
@@ -79,7 +76,6 @@ class SubCategoryView(GenericAPIView):
         if ser.is_valid(raise_exception=True):
             ser.save()
             return Response({"Success": ser.data})
-
 
     def put(self, request, pk):
         data = request.data
