@@ -4,6 +4,7 @@ from .services.ctgview import CategoryView, SubCategoryView
 from app.services.mainview import MainView
 from app.services.partners_view import PartnersView
 from app.services.productview import ProductView
+from app.services.savol_javob import Savol_View
 
 urlpatterns = [
     path('pro/', Products.as_view()),
@@ -22,6 +23,9 @@ urlpatterns = [
 
     path('prod/', ProductView.as_view()),
     path('prod/<int:pk>/', ProductView.as_view()),
+
+    path('savol/', Savol_View.as_view()),
+    path('savol/<int:pk>/', Savol_View.as_view()),
 
 
 ]

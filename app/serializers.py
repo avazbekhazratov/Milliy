@@ -22,6 +22,11 @@ from app.models import (
 )
 
 
+class Savol_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = Savol_Javoblar
+        fields = '__all__'
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
