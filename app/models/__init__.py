@@ -15,8 +15,8 @@ from app.models.core import (
     Product_info,  # Donyor
     Xarakteristika, # Akbar
     Opesaniya,  # Akbar
-    FeedBack,  # Akbar
+    FeedBack,  #
     Savol_Javoblar, #
     Product, #
-    Product_images  # Akbar
+    Product_images  #
 )

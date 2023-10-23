@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
-from .serializers import ImageSerializer, MyModelSerializer
+from .serializers import ProductImageSerializer, MyModelSerializer
 from app.models import (
     Category,
     SubCategory,

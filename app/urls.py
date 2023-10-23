@@ -32,4 +32,5 @@ urlpatterns = [
     path('regis/',AuthorizationView.as_view()),
     path('login/', LoginView.as_view()),
 
+
 ]

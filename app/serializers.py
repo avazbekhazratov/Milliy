@@ -27,6 +27,7 @@ class Savol_Serializer(serializers.ModelSerializer):
         model = Savol_Javoblar
         fields = '__all__'
 
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
@@ -39,14 +40,14 @@ class SubCategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ImageSerializer(serializers.ModelSerializer):
+class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product_images
         fields = "__all__"
 
 
 class MyModelSerializer(serializers.ModelSerializer):
-    images = ImageSerializer(many=True, read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
     image_urls = serializers.SerializerMethodField()
 
     class Meta:
@@ -69,13 +70,59 @@ class PartnersSerializers(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class Feed_backserializer(serializers.ModelSerializer):
+class News_add_Ser(serializers.ModelSerializer):
     class Meta:
-        model = FeedBack
+        model = News_add
         fields = "__all__"
 
-class Opesaniyaserializer(serializers.ModelSerializer):
 
+class Xaridordan_Ser(serializers.ModelSerializer):
     class Meta:
-        model = Opesaniya
+        model = Xaridordan_savol
+        fields = "__all__"
+
+
+class Product_info_Ser(serializers.ModelSerializer):
+    class Meta:
+        model = Product_info
+        fields = "__all__"
+
+
+class Partners_logo_Serializers(serializers.ModelSerializer):
+    class Meta:
+        model = Partners_logo
+        fields = "__all__"
+
+
+class AdvertSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Advert
+        fields = "__all__"
+
+
+class NewsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = News
+        fields = "__all__"
+
+
+class ContactSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+
+
+class BrendSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Brend
+        fields = "__all__"
+
+
+class CompanySerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Company
+
+class XarakteristikaSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Xarakteristika
         fields = "__all__"
