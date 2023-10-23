@@ -1,6 +1,7 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+<<<<<<< Updated upstream
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
@@ -69,6 +70,12 @@
           <option value="Wife.database.auth_model.OTP.objects" />
           <option value="bot.models.Tg_user.objects" />
           <option value="Wife.database.couples_models.People.objects" />
+=======
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E225" />
+>>>>>>> Stashed changes
         </list>
       </option>
     </inspection_tool>
