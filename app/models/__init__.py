@@ -9,9 +9,9 @@ from app.models.core import (
     News, # xusan
     News_add, # Donyor
     Xaridordan_savol,  # Donyor
-    Company, # Avaz
-    Contact, # Avaz
-    Brend,  # Avaz
+    Company, # Avaz - > tuagtildi
+    Contact, # Avaz -> tugatildi
+    Brend,  # Avaz - > tuagtildi
     Product_info,  # Donyor
     Xarakteristika, # Akbar
     Opesaniya,  # Akbar

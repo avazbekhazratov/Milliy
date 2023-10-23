@@ -75,14 +75,16 @@ class News_add_Ser(serializers.ModelSerializer):
         model = News_add
         fields = "__all__"
 
+
 class Xaridordan_Ser(serializers.ModelSerializer):
     class Meta:
         model = Xaridordan_savol
         fields = "__all__"
 
+
 class Product_info_Ser(serializers.ModelSerializer):
     class Meta:
-        model= Product_info
+        model = Product_info
         fields = "__all__"
 
 
@@ -101,4 +103,22 @@ class AdvertSerializers(serializers.ModelSerializer):
 class NewsSerializers(serializers.ModelSerializer):
     class Meta:
         model = News
+        fields = "__all__"
+
+
+class ContactSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = "__all__"
+
+
+class BrendSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Brend
+        fields = "__all__"
+
+
+class CompanySerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Company
         fields = "__all__"
