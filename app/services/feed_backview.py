@@ -5,7 +5,7 @@ from app.models.core import FeedBack
 
 
 
-class CategoryView(GenericAPIView):
+class FeedbackView(GenericAPIView):
     serializer_class = Feed_backserializer
 
     def get(self, request, pk=None):
