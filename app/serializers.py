@@ -75,4 +75,7 @@ class Feed_backserializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class Opesaniyaserializer(serializers.ModelSerializer):
-    class 
+
+    class Meta:
+        model = Opesaniya
+        fields = "__all__"
