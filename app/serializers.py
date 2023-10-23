@@ -67,3 +67,19 @@ class PartnersSerializers(serializers.ModelSerializer):
     class Meta:
         model = Partners
         fields = "__all__"
+
+class News_add_Ser(serializers.ModelSerializer):
+    class Meta:
+        model = News_add
+        fields = "__all__"
+
+class Xaridordan_Ser(serializers.ModelSerializer):
+    class Meta:
+        model = Xaridordan_savol
+        fields = "__all__"
+
+class Product_info_Ser(serializers.ModelSerializer):
+    class Meta:
+        model= Product_info
+        fields = "__all__"
+
