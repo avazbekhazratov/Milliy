@@ -40,14 +40,14 @@ class SubCategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ImageSerializer(serializers.ModelSerializer):
+class ProductImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product_images
         fields = "__all__"
 
 
 class MyModelSerializer(serializers.ModelSerializer):
-    images = ImageSerializer(many=True, read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
     image_urls = serializers.SerializerMethodField()
 
     class Meta:
@@ -121,4 +121,8 @@ class BrendSerializers(serializers.ModelSerializer):
 class CompanySerializers(serializers.ModelSerializer):
     class Meta:
         model = Company
+
+class XarakteristikaSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Xarakteristika
         fields = "__all__"
