@@ -1,4 +1,6 @@
 from django.urls import path
+
+from .services.auth import AuthorizationView, LoginView
 from .views import Products
 from .services.ctgview import CategoryView, SubCategoryView
 from app.services.mainview import MainView
@@ -27,5 +29,7 @@ urlpatterns = [
     path('savol/', Savol_View.as_view()),
     path('savol/<int:pk>/', Savol_View.as_view()),
 
+    path('regis/',AuthorizationView.as_view()),
+    path('login/', LoginView.as_view()),
 
 ]
