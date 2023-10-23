@@ -27,6 +27,7 @@ class Savol_Serializer(serializers.ModelSerializer):
         model = Savol_Javoblar
         fields = '__all__'
 
+
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
@@ -68,6 +69,7 @@ class PartnersSerializers(serializers.ModelSerializer):
         model = Partners
         fields = "__all__"
 
+
 class News_add_Ser(serializers.ModelSerializer):
     class Meta:
         model = News_add
@@ -83,3 +85,20 @@ class Product_info_Ser(serializers.ModelSerializer):
         model= Product_info
         fields = "__all__"
 
+
+class Partners_logo_Serializers(serializers.ModelSerializer):
+    class Meta:
+        model = Partners_logo
+        fields = "__all__"
+
+
+class AdvertSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Advert
+        fields = "__all__"
+
+
+class NewsSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = News
+        fields = "__all__"
