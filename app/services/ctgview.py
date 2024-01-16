@@ -37,7 +37,7 @@ class CategoryView(GenericAPIView):
             return Response({"Error": "Not Found"})
 
         ctg = Category.objects.filter(pk=pk).first()
-        ser = self.get_serializer(data=data, instance=ctg)
+        ser = self.get_serializer(data=data, instance=ctg, partial=True)
         if ser.is_valid(raise_exception=True):
             ser.save()
             return Response({"Success": ser.data})

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x955*+0uq=lauuvwqewiidq6_)tu)&ai$ql0o&9(-r8(1qh*to
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['159.223.145.49']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # global
     'rest_framework',
     'rest_framework.authtoken',
-
+    'corsheaders',
     'app',
 ]
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -82,8 +83,12 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgres.psycopg2',
+        'NAME': 'faxriddin',
+        'USER': 'faxriddin',
+        'PASSWORD': 'Milliy',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -106,6 +111,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# settings.py
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/

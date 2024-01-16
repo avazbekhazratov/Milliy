@@ -7,6 +7,7 @@ from app.services.mainview import MainView
 from app.services.partners_view import PartnersView
 from app.services.productview import ProductView
 from app.services.savol_javob import Savol_View
+from app.services.Product_info import XaridorView
 
 urlpatterns = [
     path('pro/', Products.as_view()),
@@ -26,11 +27,13 @@ urlpatterns = [
     path('prod/', ProductView.as_view()),
     path('prod/<int:pk>/', ProductView.as_view()),
 
+    path('prod_info/', XaridorView.as_view()),
+    path('prod_info/<int:pk>/', XaridorView.as_view()),
+
     path('savol/', Savol_View.as_view()),
     path('savol/<int:pk>/', Savol_View.as_view()),
 
-    path('regis/',AuthorizationView.as_view()),
+    path('regis/', AuthorizationView.as_view()),
     path('login/', LoginView.as_view()),
-
 
 ]

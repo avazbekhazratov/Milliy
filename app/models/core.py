@@ -4,6 +4,7 @@ from app.models import User
 
 
 class Category(models.Model):
+    images = models.ImageField(upload_to='categories/', null=True, blank=True)
     name = models.CharField(max_length=199, unique=True)
 
     def __str__(self):
