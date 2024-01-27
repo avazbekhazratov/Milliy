@@ -28,16 +28,21 @@ class Savol_Serializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = '__all__'
+# serializers.py
 
 
 class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SubCategory
         fields = '__all__'
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    subctg_set = SubCategorySerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Category
+        fields = ['id', 'images', 'name', 'subctg_set']
 
 
 class ProductImageSerializer(serializers.ModelSerializer):
@@ -121,6 +126,7 @@ class BrendSerializers(serializers.ModelSerializer):
 class CompanySerializers(serializers.ModelSerializer):
     class Meta:
         model = Company
+
 
 class XarakteristikaSerializers(serializers.ModelSerializer):
     class Meta:

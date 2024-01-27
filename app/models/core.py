@@ -13,7 +13,7 @@ class Category(models.Model):
 
 class SubCategory(models.Model):
     name = models.CharField(max_length=200)
-    subctg = models.ForeignKey(Category, on_delete=models.CASCADE)
+    subctg = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='subctg_set')
 
     def __str__(self):
         return f"{self.name} - {self.subctg}"
